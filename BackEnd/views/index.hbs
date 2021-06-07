@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="css/style.css">
+    <title>QUADB</title>
+</head>
+<body>
+    <section>
+        <div class="wrapper">
+            <div class="header">
+                <div class="title">
+                    <div class="logo"><span>Hodlinfo</span>.com</div>
+                    <div class="sponser">Powered By <span>Finstreet</span></div>
+                </div>
+                <div class="selector">
+                    <select name="INR" id="inr">
+                        <option value="0">INR</option>
+                        <option value="1">10</option>
+                        <option value="2">100</option>
+                        <option value="3">1000</option>
+                        <option value="4">10000</option>
+                        <option value="5">100000</option>
+                    </select>
+                    <select name="BTC" id="btc">
+                        <option value="0">BTC</option>
+                        <option value="1">0.0000036</option>
+                        <option value="2">0.000036</option>
+                        <option value="3">0.00036</option>
+                        <option value="4">0.0036</option>
+                        <option value="5">0.03</option>
+                    </select>
+
+                </div>
+                <div class="telegram">
+                    <h6 class="number">58</h6>
+                    <button class="btn" title="Make sure toggle should be in open state"><img src="https://img.icons8.com/color/50/000000/telegram-app.png"/>Connect Telegram</button>
+                    <label class="switch">
+                        <input id="toggle" type="checkbox" ><span class="slider"></span>
+                    </label>
+
+                </div>
+            </div>
+            <div class="data">
+                <table>
+                    
+                    <tr>
+                        <th>#</th>
+                        <th>name</th>
+                        <th>last</th>
+                        <th>Buy/Sell Price</th>
+                        <th>volume</th>
+                        <th>base_unit</th>
+                    </tr>
+                {{#user}}
+                    <tr>
+                        <td>{{id}}</td>
+                        <td>{{name}}</td>
+                        <td>{{last}}</td>
+                        <td>{{buy}}/{{sell}}</td>
+                        <td>{{volume}}</td>
+                        <td>{{units}}</td>
+                    </tr>
+                   {{/user}}
+                    
+                </table>
+            </div>
+          
+        </div>
+    </section>
+</body>
+<script src="js/index.js"></script>
+</html>
